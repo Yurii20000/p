@@ -1,3 +1,31 @@
+/* Стилі для розділів */
+section {
+    border: 2px solid #3498db; /* Додаємо рамку навколо розділів */
+    border-radius: 10px; /* Овальна форма рамки */
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    width: calc(33.33% - 40px); /* Розмір розділів з врахуванням зовнішніх відступів */
+    box-sizing: border-box; /* Включаємо границі до обчислення розміру блоку */
+}
+
+/* Стилі для посилань (як кнопок) */
+ul li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px; /* Розмір кнопки */
+    background-color: #e74c3c; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту */
+    border-radius: 30px; /* Овальна форма кнопки */
+    margin: 5px; /* Зовнішні відступи між кнопками */
+    transition: background-color 0.3s ease; /* Плавна анімація зміни кольору фону */
+}
+
+/* Змінюємо колір фону кнопки при наведенні */
+ul li a:hover {
+    background-color: #e67e22;
+}
+
 /* Стилі для розділів "Про мене", "Практичні роботи" і "Лабораторні заняття" */
 section {
     display: inline-block;
