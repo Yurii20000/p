@@ -1,3 +1,42 @@
+/* Стилі для розділів "Про мене", "Практичні роботи" і "Лабораторні заняття" */
+section {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Задаємо ширину блоків, щоб вони були в одному рядку */
+    margin: 20px; /* Додаємо зовнішні відступи між блоками */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Збільшуємо шрифт для заголовків розділів */
+section h2 {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+/* Стилі для списків практичних робіт і лабораторних занять */
+ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #e74c3c; /* Червоний колір при наведенні */
+}
+
 /* Загальні стилі для всього сайту */
 body {
     font-family: Arial, sans-serif;
