@@ -1,0 +1,254 @@
+/* 1. Виділіть перший елемент <li> та надайте йому жирний шрифт. */
+nav li:first-child {
+    font-weight: bold;
+}
+
+/* 2. Виберіть усі елементи <a>, які є останніми дочірніми елементами свого батька, і пофарбуйте їх у червоний колір. */
+nav a:last-child {
+    color: #e74c3c;
+}
+
+/* 3. Виберіть усі елементи input, які вимкнено (disabled), і надайте їм сірий фоновий колір. */
+input[disabled] {
+    background-color: #ccc;
+}
+
+/* 4. Виберіть усі елементи <p>, які є прямими дочірніми елементами елемента <div>, і надайте їм напівжирний шрифт. */
+div > p {
+    font-weight: bold;
+}
+
+/* 5. Виберіть усі елементи, які мають атрибут href, що починається з https, і пофарбуйте їх у зелений колір. */
+a[href^="https"] {
+    color: #27ae60;
+}
+
+/* 6. Виберіть усі елементи input, які мають атрибут type як text і обведіть їх рамкою 1 піксель суцільним синім кольором. */
+input[type="text"] {
+    border: 1px solid #3498db;
+}
+
+/* 7. Виберіть усі елементи <li>, які є першими або останніми дочірніми елементами батьківського елемента, і встановіть для них розмір шрифту 24 пікселя. */
+li:first-child,
+li:last-child {
+    font-size: 24px;
+}
+
+/* 8. Виберіть усі елементи <p>, які є нащадками елемента <div> і встановіть для них розмір шрифту 16 пікселів. */
+div p {
+    font-size: 16px;
+}
+
+/* 9. Виберіть усі елементи <input> зі значенням checked, і надайте їм фонового кольору світло-блакитний. */
+input[type="checkbox"]:checked {
+    background-color: #a9cce3;
+}
+
+/* 10. Виділіть усі елементи <a>, які є прямими дочірніми елементами <li>, і підкресліть їх текстом. */
+li > a {
+    text-decoration: underline;
+}
+
+/* 11. Виділіть усі елементи <li>, які є парними елементами батьківського елемента, і надайте їм жирний шрифт. */
+li:nth-child(even) {
+    font-weight: bold;
+}
+
+/* 12. Виберіть усі елементи <input>, які мають атрибут типу text і не disabled, і надайте їм фоновий колір сірого кольору. */
+input[type="text"]:not([disabled]) {
+    background-color: #ccc;
+}
+
+/* 13. Виберіть усі елементи <p>, які є першими дочірніми елементами батьківського елемента, і встановіть для них розмір шрифту 24 пікселя. */
+:first-child p {
+    font-size: 24px;
+}
+
+/* 14. Виберіть елемент <li> який йде після елементу з класом .special і зробіть його перечеркнутим. */
+.special + li {
+    text-decoration: line-through;
+}
+
+/* 15. Виділіть першу літеру кожного елемента <p> і надайте йому розмір шрифту 36 пікселів. */
+p::first-letter {
+    font-size: 36px;
+}
+
+/* 16. Додайте ::after для кожного елемента <a> та надайте йому вміст ↗. */
+a::after {
+    content: " ↗";
+}
+
+/* Стилі для навігаційного меню */
+nav {
+    background-color: #ccc; /* Сірий колір блоку навігації */
+    padding: 10px;
+    border: 1px solid #333; /* Сіра рамка блоку навігації */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    transition: border-color 0.3s;
+    background-color: #ff6600; /* Оранжевий колір кнопок */
+    color: #fff; /* Білий колір тексту кнопок */
+}
+
+/* Змінюємо колір рамки кнопок при наведенні */
+nav a:hover {
+    border-color: #27ae60; /* Зелений колір рамки при наведенні */
+    background-color: #27ae60; /* Зелений колір кнопок при наведенні */
+}
+
+/* Змінюємо колір рамки кнопок при натисканні */
+nav a:active {
+    border-color: #e74c3c; /* Червоний колір рамки при натисканні */
+    background-color: #e74c3c; /* Червоний колір кнопок при натисканні */
+}
+
+/* Стилі для навігаційного меню */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border: 1px solid transparent; /* Додаємо рамку (по замовчуванню transparent) */
+    padding: 5px 10px;
+    transition: border-color 0.3s; /* Плавна анімація зміни кольору рамки */
+}
+
+/* Змінюємо колір рамки при наведенні на елемент */
+nav a:hover {
+    border-color: #3498db; /* Синій колір рамки при наведенні */
+}
+
+/* Змінюємо колір рамки при натисканні на елемент */
+nav a:active {
+    border-color: #e74c3c; /* Червоний колір рамки при натисканні */
+}
+
+
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333; /* Колір тексту за замовчуванням */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для заголовків */
+h1 {
+    color: #e74c3c; /* Червоний колір для заголовку h1 */
+}
+
+h2 {
+    color: #3498db; /* Синій колір для заголовку h2 */
+}
+
+/* Стилі для навігаційного меню */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Стилі для основного вмісту */
+p {
+    line-height: 1.5;
+    color: #2ecc71; /* Зелений колір для абзаців */
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #f1c40f; /* Жовтий колір для списку */
+}
+
+/* Стилі для виділеного пункту списку */
+.special {
+    font-weight: bold;
+    color: #9b59b6; /* Фіолетовий колір для виділеного пункту списку */
+}
+
+/* Стилі для форми */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e67e22; /* Помаранчевий колір для міток */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #f1c40f;
+    border-radius: 4px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="checkbox"]:focus {
+    border: 1px solid #27ae60;
+    box-shadow: 0 0 5px #27ae60;
+}
+
+/* Стилі для футера */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Стилі для секції */
+section {
+    margin-top: 20px;
+}
