@@ -1,0 +1,91 @@
+/* Загальні стилі для всього сайту */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Стилі для заголовка в шапці сайту */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Стилі для секцій на головній сторінці */
+section {
+    padding: 40px;
+}
+
+section h1 {
+    font-size: 36px;
+    color: #3498db;
+}
+
+section h2 {
+    font-size: 24px;
+    color: #e74c3c;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+section p {
+    line-height: 1.5;
+}
+
+/* Стилі для списків практичних робіт та лабораторних занять */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Стилі для футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Застосування стилів до посилань на соціальні мережі у футері */
+footer a:hover {
+    color: #e67e22;
+}
