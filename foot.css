@@ -4,20 +4,27 @@ section {
     border-radius: 10px; /* Овальна форма рамки */
     padding: 20px;
     margin: 20px;
-    display: inline-block;
     width: calc(33.33% - 40px); /* Розмір розділів з врахуванням зовнішніх відступів */
     box-sizing: border-box; /* Включаємо границі до обчислення розміру блоку */
+    display: inline-block; /* Розташовуємо розділи в рядок */
+    vertical-align: top; /* Вирівнюємо вертикально по верхньому краю */
+}
+
+/* Стилі для заголовків розділів */
+section h2 {
+    margin-top: 0; /* Видаляємо верхній відступ у заголовка */
 }
 
 /* Стилі для посилань (як кнопок) */
 ul li a {
-    display: inline-block;
+    display: block; /* Повністю займає блок */
+    text-align: center; /* Вирівнюємо текст по центру */
     text-decoration: none;
     padding: 10px 20px; /* Розмір кнопки */
     background-color: #e74c3c; /* Колір фону кнопки */
     color: #fff; /* Колір тексту */
     border-radius: 30px; /* Овальна форма кнопки */
-    margin: 5px; /* Зовнішні відступи між кнопками */
+    margin: 10px auto; /* Рівномірні зовнішні відступи по горизонталі */
     transition: background-color 0.3s ease; /* Плавна анімація зміни кольору фону */
 }
 
@@ -26,44 +33,6 @@ ul li a:hover {
     background-color: #e67e22;
 }
 
-/* Стилі для розділів "Про мене", "Практичні роботи" і "Лабораторні заняття" */
-section {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%; /* Задаємо ширину блоків, щоб вони були в одному рядку */
-    margin: 20px; /* Додаємо зовнішні відступи між блоками */
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Збільшуємо шрифт для заголовків розділів */
-section h2 {
-    font-size: 24px;
-    color: #e74c3c;
-}
-
-/* Стилі для списків практичних робіт і лабораторних занять */
-ul {
-    list-style: none;
-    padding-left: 0;
-    text-align: left;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-}
-
-ul li a:hover {
-    color: #e74c3c; /* Червоний колір при наведенні */
-}
 
 /* Загальні стилі для всього сайту */
 body {
