@@ -4,8 +4,34 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <a href="https://www.youtube.com" target="_blank" class="youtube-link">Перейти на YouTube</a>
-    </div>
+    <header>
+        <div class="logo">YouTube</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Пошук">
+            <button>Пошук</button>
+        </div>
+    </header>
+    <main>
+        <section class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            <h2>Назва відео</h2>
+            <p>Опис відео</p>
+        </section>
+        <section class="recommendations">
+            <div class="video-thumbnail">
+                <img src="video_thumbnail.jpg" alt="Зображення відео">
+                <h3>Назва рекомендації</h3>
+                <p>Автор рекомендації</p>
+            </div>
+            <!-- Додайте більше блоків для інших рекомендацій -->
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>Про нас</li>
+            <li>Контакти</li>
+            <li>Умови користування</li>
+        </ul>
+    </footer>
 </body>
 </html>
