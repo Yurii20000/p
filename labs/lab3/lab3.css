@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    /* Стилі для верхнього бару */
+}
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+.video-container {
+    flex: 2;
+    /* Стилі для відео-контейнера */
+}
+
+.recommendations {
+    flex: 1;
+    /* Стилі для списку рекомендацій */
+}
+
+footer {
+    /* Стилі для підвалу */
+}
