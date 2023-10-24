@@ -48,7 +48,69 @@ iframe {
 
 recommendations {
     flex: 1;
+}body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
 }
+
+.container {
+    display: flex;
+}
+
+header {
+    background-color: #FF0000;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #CCC;
+}
+
+button {
+    background-color: #FF3333;
+    color: #FFF;
+    border: none;
+    padding: 5px 10px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #333;
+    color: #FFF;
+    padding: 20px;
+}
+
+.video-container {
+    flex: 3;
+    padding: 20px;
+    background-color: #FFF;
+}
+
+.recommendations {
+    flex: 2;
+    padding: 20px;
+    background-color: #FFF;
+}
+
 
 video-thumbnail {
     padding: 10px;

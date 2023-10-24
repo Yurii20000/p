@@ -4,34 +4,25 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">YouTube</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Пошук">
-            <button>Пошук</button>
-        </div>
-    </header>
-    <main>
-        <section class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            <h2>Назва відео</h2>
-            <p>Опис відео</p>
-        </section>
-        <section class="recommendations">
-            <div class="video-thumbnail">
-                <img src="video_thumbnail.jpg" alt="Зображення відео">
-                <h3>Назва рекомендації</h3>
-                <p>Автор рекомендації</p>
+    <div class="container">
+        <header>
+            <div class="logo">YouTube</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Пошук">
+                <button>Пошук</button>
             </div>
-            <!-- Додайте більше блоків для інших рекомендацій -->
-        </section>
-    </main>
-    <footer>
-        <ul>
-            <li>Про нас</li>
-            <li>Контакти</li>
-            <li>Умови користування</li>
-        </ul>
-    </footer>
+        </header>
+        <main>
+            <nav class="sidebar">
+                <!-- Зміст бічного бару (список категорій тощо) -->
+            </nav>
+            <section class="video-container">
+                <!-- Відео-контейнер (відео та інформація про відео) -->
+            </section>
+            <section class="recommendations">
+                <!-- Список рекомендацій (мініатюри відео та заголовки) -->
+            </section>
+        </main>
+    </div>
 </body>
 </html>
