@@ -1,28 +1,28 @@
 body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-header {
-    /* Стилі для верхнього бару */
-}
-
-main {
-    flex: 1;
+.container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.video-container {
-    flex: 2;
-    /* Стилі для відео-контейнера */
+.youtube-link {
+    padding: 10px 20px;
+    background-color: #FF0000;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
-.recommendations {
-    flex: 1;
-    /* Стилі для списку рекомендацій */
-}
-
-footer {
-    /* Стилі для підвалу */
+.youtube-link:hover {
+    background-color: #FF3333;
 }
