@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Планер</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Кастомний шрифт */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2>Планер</h2>
+            <label for="task1">Завдання 1:</label>
+            <input type="text" id="task1" placeholder="Введіть завдання 1">
+            <label for="task2">Завдання 2:</label>
+            <input type="text" id="task2" placeholder="Введіть завдання 2">
+            <label for="task3">Завдання 3:</label>
+            <input type="text" id="task3" placeholder="Введіть завдання 3">
+        </div>
+        <div>
+            <h2>Нагадування</h2>
+            <label for="reminder1">Нагадування 1:</label>
+            <input type="text" id="reminder1" placeholder="Введіть нагадування 1">
+            <label for="reminder2">Нагадування 2:</label>
+            <input type="text" id="reminder2" placeholder="Введіть нагадування 2">
+            <label for="reminder3">Нагадування 3:</label>
+            <input type="text" id="reminder3" placeholder="Введіть нагадування 3">
+        </div>
+    </div>
+</body>
+</html>
