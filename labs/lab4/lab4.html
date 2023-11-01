@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Планер</title>
+    <title>Щотижневий план</title>
     <style>
         body {
             font-family: 'Arial', sans-serif; /* Кастомний шрифт */
@@ -11,11 +11,29 @@
 
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             grid-gap: 20px;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+        }
+
+        .header {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .section {
+            grid-column: span 2;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .days {
+            grid-column: span 2;
+            font-size: 16px;
+            margin-top: 10px;
         }
 
         label {
@@ -44,24 +62,21 @@
 </head>
 <body>
     <div class="container">
-        <div>
-            <h2>Планер</h2>
-            <label for="task1">Завдання 1:</label>
-            <input type="text" id="task1" placeholder="Введіть завдання 1">
-            <label for="task2">Завдання 2:</label>
-            <input type="text" id="task2" placeholder="Введіть завдання 2">
-            <label for="task3">Завдання 3:</label>
-            <input type="text" id="task3" placeholder="Введіть завдання 3">
-        </div>
-        <div>
-            <h2>Нагадування</h2>
-            <label for="reminder1">Нагадування 1:</label>
-            <input type="text" id="reminder1" placeholder="Введіть нагадування 1">
-            <label for="reminder2">Нагадування 2:</label>
-            <input type="text" id="reminder2" placeholder="Введіть нагадування 2">
-            <label for="reminder3">Нагадування 3:</label>
-            <input type="text" id="reminder3" placeholder="Введіть нагадування 3">
-        </div>
+        <div class="header">WEEKLY PLAN</div>
+        <div class="section">TO DO</div>
+        <div class="section">WEEK OF</div>
+        <div class="section">HEALTHY HABIT</div>
+        <div class="days">MONDAY</div>
+        <label for="monday_goals">TOP 3 GOALS</label>
+        <input type="text" id="monday_goals" placeholder="Введіть ваші цілі">
+        <label for="monday_achievement">ROCKED IT</label>
+        <input type="checkbox" id="monday_achievement">
+        <label for="monday_improvement">ROOM FOR IMPROVEMENT</label>
+        <input type="text" id="monday_improvement" placeholder="Покращення">
+        
+        <!-- Аналогічно для інших днів тижня -->
+
+        <div class="days">NEXT WEEK</div>
     </div>
 </body>
 </html>
