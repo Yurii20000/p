@@ -31,9 +31,14 @@
         }
 
         .days {
-            grid-column: span 2;
             font-size: 16px;
             margin-top: 10px;
+        }
+
+        .square {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
         }
 
         label {
@@ -44,8 +49,8 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border: none;
+            outline: none;
         }
 
         input[type="checkbox"] {
@@ -63,20 +68,34 @@
 <body>
     <div class="container">
         <div class="header">WEEKLY PLAN</div>
-        <div class="section">TO DO</div>
-        <div class="section">WEEK OF</div>
-        <div class="section">HEALTHY HABIT</div>
-        <div class="days">MONDAY</div>
-        <label for="monday_goals">TOP 3 GOALS</label>
-        <input type="text" id="monday_goals" placeholder="Введіть ваші цілі">
-        <label for="monday_achievement">ROCKED IT</label>
-        <input type="checkbox" id="monday_achievement">
-        <label for="monday_improvement">ROOM FOR IMPROVEMENT</label>
-        <input type="text" id="monday_improvement" placeholder="Покращення">
-        
-        <!-- Аналогічно для інших днів тижня -->
-
-        <div class="days">NEXT WEEK</div>
+        <div class="section square">
+            <label for="to_do">TO DO</label>
+            <input type="text" id="to_do" placeholder="Ваш список справ">
+        </div>
+        <div class="section square">
+            <label for="week_of">WEEK OF</label>
+            <input type="text" id="week_of" placeholder="Дата тижня">
+        </div>
+        <div class="section square">
+            <label for="healthy_habit">HEALTHY HABIT</label>
+            <input type="text" id="healthy_habit" placeholder="Здорова звичка">
+        </div>
+        <div class="days square">
+            <label>MONDAY</label>
+            <label for="monday_goals">TOP 3 GOALS</label>
+            <input type="text" id="monday_goals" placeholder="Ваші цілі">
+            <label for="monday_achievement">ROCKED IT</label>
+            <input type="checkbox" id="monday_achievement">
+            <label for="monday_improvement">ROOM FOR IMPROVEMENT</label>
+            <input type="text" id="monday_improvement" placeholder="Покращення">
+        </div>
+        <div class="days square">
+            <!-- Аналогічно для інших днів тижня -->
+        </div>
+        <div class="section square">
+            <label for="next_week">NEXT WEEK</label>
+            <input type="text" id="next_week" placeholder="Плани на наступний тиждень">
+        </div>
     </div>
 </body>
 </html>
