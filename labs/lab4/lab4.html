@@ -11,7 +11,8 @@
 
         .container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             grid-gap: 20px;
             max-width: 800px;
             margin: 0 auto;
@@ -20,12 +21,13 @@
 
         .header {
             grid-column: 1 / -1;
+            grid-row: 1 / 2;
             text-align: center;
             font-size: 24px;
         }
 
         .section {
-            grid-column: span 2;
+            grid-column: span 4;
             font-size: 18px;
             margin-top: 10px;
         }
@@ -33,12 +35,55 @@
         .days {
             font-size: 16px;
             margin-top: 10px;
+            grid-row: span 1;
         }
 
         .square {
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .triangle-top-left,
+        .triangle-top-right,
+        .triangle-bottom-left,
+        .triangle-bottom-right {
+            width: 0;
+            height: 0;
+            position: absolute;
+            content: "";
+        }
+
+        .triangle-top-left {
+            border-left: 20px solid transparent;
+            border-bottom: 20px solid #ccc;
+            top: 0;
+            left: 0;
+        }
+
+        .triangle-top-right {
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #ccc;
+            top: 0;
+            right: 0;
+        }
+
+        .triangle-bottom-left {
+            border-left: 20px solid transparent;
+            border-top: 20px solid #ccc;
+            bottom: 0;
+            left: 0;
+        }
+
+        .triangle-bottom-right {
+            border-right: 20px solid transparent;
+            border-top: 20px solid #ccc;
+            bottom: 0;
+            right: 0;
         }
 
         label {
@@ -48,7 +93,6 @@
         input[type="text"], input[type="checkbox"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
             border: none;
             outline: none;
         }
@@ -67,44 +111,49 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">WEEKLY PLAN</div>
+        <div class="header square">
+            <label for="header">WEEKLY PLAN</label>
+        </div>
         <div class="section square">
             <label for="to_do">TO DO</label>
             <input type="text" id="to_do" placeholder="Ваш список справ">
+            <div class="triangle-top-left"></div>
         </div>
         <div class="section square">
             <label for="week_of">WEEK OF</label>
             <input type="text" id="week_of" placeholder="Дата тижня">
+            <div class="triangle-top-right"></div>
         </div>
         <div class="section square">
             <label for="healthy_habit">HEALTHY HABIT</label>
             <input type="text" id="healthy_habit" placeholder="Здорова звичка">
+            <div class="triangle-top-left"></div>
         </div>
         <div class="days square">
-            <label>MONDAY</label>
+            <label for="monday">MONDAY</label>
             <label for="monday_goals">TOP 3 GOALS</label>
             <input type="text" id="monday_goals" placeholder="Ваші цілі">
             <label for="monday_achievement">ROCKED IT</label>
             <input type="checkbox" id="monday_achievement">
             <label for="monday_improvement">ROOM FOR IMPROVEMENT</label>
             <input type="text" id="monday_improvement" placeholder="Покращення">
+            <div class="triangle-bottom-right"></div>
         </div>
         <div class="days square">
-            <label>TUESDAY</label>
+            <label for="tuesday">TUESDAY</label>
             <label for="tuesday_goals">TOP 3 GOALS</label>
             <input type="text" id="tuesday_goals" placeholder="Ваші цілі">
             <label for="tuesday_achievement">ROCKED IT</label>
             <input type="checkbox" id="tuesday_achievement">
             <label for="tuesday_improvement">ROOM FOR IMPROVEMENT</label>
             <input type="text" id="tuesday_improvement" placeholder="Покращення">
+            <div class="triangle-bottom-right"></div>
         </div>
-        <div class="days square">
-            <label>WEDNESDAY</label>
-            <!-- Додайте аналогічні блоки для інших днів тижня -->
-        </div>
+        <!-- Аналогічні блоки для інших днів тижня -->
         <div class="section square">
             <label for="next_week">NEXT WEEK</label>
             <input type="text" id="next_week" placeholder="Плани на наступний тиждень">
+            <div class="triangle-bottom-left"></div>
         </div>
     </div>
 </body>
