@@ -18,15 +18,3 @@ body {
     background-size: cover;
   }
   
-  #pokemon1 {
-    background-image: url('https://img.pokemondb.net/sprites/scarlet-violet/normal/grookey.png');
-  }
-  
-  #pokemon2 {
-    background-image: url('https://img.pokemondb.net/sprites/home/normal/grookey.png');
-  }
-  
-  #pokemon3 {
-    background-image: url('https://img.pokemondb.net/sprites/sword-shield/normal/grookey.png');
-  }
-  
