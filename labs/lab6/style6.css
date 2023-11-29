@@ -8,19 +8,25 @@ body {
     height: 100vh;
     background: url('your-background-image.jpg') center/cover no-repeat; /* Замініть 'your-background-image.jpg' на зображення фону */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
   
   .pokemon-sprite {
-    width: 96px; /* Розмір спрайту покемона */
+    width: 96px; /* Розмір фото покемона */
     height: 96px;
-    background: url('path-to-your-pokemon-sprite.png') 0 0 no-repeat; /* Замініть 'path-to-your-pokemon-sprite.png' на шлях до вашого спрайту покемона */
-    animation: animatePokemon 1s steps(4) infinite; /* Налаштування анімації */
+    background-size: cover;
   }
   
-  @keyframes animatePokemon {
-    from { background-position: 0 0; }
-    to { background-position: -384px 0; } /* Ширина спрайту помножити на кількість кадрів (4 в даному випадку) */
+  #pokemon1 {
+    background-image: url('https://img.pokemondb.net/sprites/scarlet-violet/normal/grookey.png');
+  }
+  
+  #pokemon2 {
+    background-image: url('https://img.pokemondb.net/sprites/home/normal/grookey.png');
+  }
+  
+  #pokemon3 {
+    background-image: url('https://img.pokemondb.net/sprites/sword-shield/normal/grookey.png');
   }
   
