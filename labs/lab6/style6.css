@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .pokemon-container {
+    width: 100vw;
+    height: 100vh;
+    background: url('your-background-image.jpg') center/cover no-repeat; /* Замініть 'your-background-image.jpg' на зображення фону */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pokemon-sprite {
+    width: 96px; /* Розмір спрайту покемона */
+    height: 96px;
+    background: url('path-to-your-pokemon-sprite.png') 0 0 no-repeat; /* Замініть 'path-to-your-pokemon-sprite.png' на шлях до вашого спрайту покемона */
+    animation: animatePokemon 1s steps(4) infinite; /* Налаштування анімації */
+  }
+  
+  @keyframes animatePokemon {
+    from { background-position: 0 0; }
+    to { background-position: -384px 0; } /* Ширина спрайту помножити на кількість кадрів (4 в даному випадку) */
+  }
+  
