@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мій Портфоліо</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Моє Портфоліо</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-image: url('your-image-url.jpg'); /* Замініть 'your-image-url.jpg' на URL вашого фонового зображення */
+            font-family: 'Arial', sans-serif;
+            background-image: url('your-background-image.jpg'); /* Замініть 'your-background-image.jpg' на URL вашого фонового зображення */
             background-size: cover;
             background-position: center;
-            font-family: 'Arial', sans-serif;
             color: white;
         }
 
@@ -28,14 +29,31 @@
 
         p {
             font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .portfolio-link:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Мій Професійний Веб-Сайт</h1>
-        <p>Ласкаво просимо на мою сторінку портфоліо. Тут ви знайдете інформацію про мої навички та роботи.</p>
+        <h1>Моє Портфоліо</h1>
+        <p>Ласкаво просимо! Тут ви можете ознайомитися з моїми проектами та навичками.</p>
+        <a href="your-portfolio-link" class="portfolio-link">Переглянути Портфоліо</a>
     </header>
 </body>
 
