@@ -1,38 +1,45 @@
 body {
-    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
     margin: 0;
+    overflow: hidden; /* Hide the scrollbar */
+}
+
+nav {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
     padding: 0;
-    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 50px;
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
 }
 
-section {
-    padding: 30px;
-    text-align: center;
-}
-
-.portfolio-item {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
+.home {
+    position: relative;
+    background-color: #fff;
+    max-width: 2050px; /* Adjust the value as needed */
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+    color: #21243d;
+    font-family: Heebo;
     padding: 20px;
 }
+
+/* Додайте решту стилів сюди */
