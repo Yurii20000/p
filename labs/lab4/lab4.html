@@ -1,160 +1,181 @@
+Юра Цайгер, [05.12.2023 17:54]
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Щотижневий план</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif; /* Кастомний шрифт */
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edges">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles_v2.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=YourCustomFont" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'YourCustomFont', sans-serif;
+    }
 
-        .container {
-            display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            grid-gap: 0; /* Видаляємо відступи між блоками */
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    body {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+      min-height: 100vh;
+    }
 
-        .header {
-            grid-column: 1 / -1;
-            grid-row: 1 / 2;
-            text-align: center;
-            font-size: 24px;
-        }
+    .container {
+      display: grid;
+      grid-template-columns: 0.32fr 1fr;
+      grid-template-rows: auto 1fr;
+      grid-area: main;
+    }
 
-        .section {
-            grid-column: span 4;
-            font-size: 18px;
-            margin-top: 10px;
-        }
+    .header {
+      grid-area: header;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px;
+      margin: 0;
+    }
 
-        .days {
-            font-size: 16px;
-            margin-top: 10px;
-            grid-row: span 1;
-        }
+    .header h1, .header h2 {
+      margin: 0;
+      margin-top: 10px;
+    }
 
-        .square {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-        }
+    .left {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+    
+    /* Add this style to stretch the left side */
+    .left .article-container {
+      height: 100%;
+      overflow: auto; /* Add overflow: auto to enable scrolling if needed */
+    }
+    
+    .article-container {
+      display: grid;
+      grid-template-rows: auto auto auto 1fr;
+      gap: 10px;
+      height: 100%;
+    }
 
-        .triangle-top-left,
-        .triangle-top-right,
-        .triangle-bottom-left,
-        .triangle-bottom-right {
-            width: 0;
-            height: 0;
-            position: absolute;
-            content: "";
-        }
+    .section-title {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
 
-        .triangle-top-left {
-            border-left: 20px solid transparent;
-            border-bottom: 20px solid #ccc;
-            top: 0;
-            left: 0;
-        }
+    .small-text-input {
+      width: 400px; /* Increased width */
+      min-width: 100px; /* Minimum width to prevent further resizing */
+      max-width: 400px; /* Maximum width to prevent further resizing */
+      margin-top: 10px; /* Moved down by 20px */
+      margin-bottom: 10px; /* Adjusted margin-bottom */
+      padding: 5px;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid #000;
+      font-size: 0.8em; /* Adjusted font size */
+      resize: none; /* Disabled resizing */
+    }
 
-        .triangle-top-right {
-            border-right: 20px solid transparent;
-            border-bottom: 20px solid #ccc;
-            top: 0;
-            right: 0;
-        }
+    .text-input {
+      width: calc(100% - 10px);
+      margin: 0;
+      padding: 5px;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid #000;
+      font-size: 1em; /* Adjusted font size */
+    }
 
-        .triangle-bottom-left {
-            border-left: 20px solid transparent;
-            border-top: 20px solid #ccc;
-            bottom: 0;
-            left: 0;
-        }
+    .days-of-week {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    
+    .footer {
+      grid-area: footer;
+    }
+    
+    .day {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      border: 2px solid black;
+      font-size: 1.5em;
+      padding: 5px;
+    }
 
-        .triangle-bottom-right {
-            border-right: 20px solid transparent;
-            border-top: 20px solid #ccc;
-            bottom: 0;
-            right: 0;
-        }
-
-        label {
-            display: block;
-        }
-
-        input[type="text"], input[type="checkbox"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            outline: none;
-        }
-
-        input[type="checkbox"] {
-            width: auto;
-            margin-right: 5px;
-        }
-
-        @media screen and (max-width: 600px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+Юра Цайгер, [05.12.2023 17:54]
+.weekly-plan {
+      display: grid;
+      grid-template-rows: auto auto auto; /* Adjusted grid-template-rows */
+      grid-gap: 3px;
+      height: 100%; /* Ensure .weekly-plan covers the entire height */
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header square">
-            <label for="header">WEEKLY PLAN</label>
-        </div>
-        <div class="section square">
-            <label for="to_do">TO DO</label>
-            <input type="text" id="to_do" placeholder="Ваш список справ">
-            <div class="triangle-top-left"></div>
-        </div>
-        <div class="section square">
-            <label for="week_of">WEEK OF</label>
-            <input type="text" id="week_of" placeholder="Дата тижня">
-            <div class="triangle-top-right"></div>
-        </div>
-        <div class="section square">
-            <label for "healthy_habit">HEALTHY HABIT</label>
-            <input type="text" id="healthy_habit" placeholder="Здорова звичка">
-            <div class="triangle-top-left"></div>
-        </div>
-        <div class="days square">
-            <label for="monday">MONDAY</label>
-            <label for="monday_goals">TOP 3 GOALS</label>
-            <input type="text" id="monday_goals" placeholder="Ваші цілі">
-            <label for="monday_achievement">ROCKED IT</label>
-            <input type="checkbox" id="monday_achievement">
-            <label for="monday_improvement">ROOM FOR IMPROVEMENT</label>
-            <input type="text" id="monday_improvement" placeholder="Покращення">
-            <div class="triangle-bottom-right"></div>
-        </div>
-        <div class="days square">
-            <label for="tuesday">TUESDAY</label>
-            <label for="tuesday_goals">TOP 3 GOALS</label>
-            <input type="text" id="tuesday_goals" placeholder="Ваші цілі">
-            <label for="tuesday_achievement">ROCKED IT</label>
-            <input type="checkbox" id="tuesday_achievement">
-            <label for="tuesday_improvement">ROOM FOR IMPROVEMENT</label>
-            <input type="text" id="tuesday_improvement" placeholder="Покращення">
-            <div class="triangle-bottom-right"></div>
-        </div>
-        <!-- Аналогічні блоки для інших днів тижня -->
-        <div class="section square">
-            <label for="next_week">NEXT WEEK</label>
-            <input type="text" id="next_week" placeholder="Плани на наступний тиждень">
-            <div class="triangle-bottom-left"></div>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1>PLAN WEEKLY</h1>
+      <h2>Week Of</h2>
+      <textarea class="small-text-input" rows="1" type="text"></textarea>
+      <h2>Healthy Habit</h2>
+      <textarea class="small-text-input" rows="1" type="text"></textarea>
+      <h2>Room for Improvement</h2>
+      <h2>Rocked It</h2>
     </div>
+    <div class="left">
+      <div class="article-container">
+        <article class="weekly-plan">
+          <section>
+            <h2 class="section-title">Top 3 Goals</h2>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+          </section>
+          <section>
+            <h2 class="section-title">Everything Else</h2>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+          </section>
+          <section>
+            <h2 class="section-title">Next Week</h2>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+            <textarea class="text-input" rows="1" type="text"></textarea>
+          </section>
+        </article>
+      </div>
+    </div>
+    <div class="days-of-week">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+      <div class="day">Saturday / Sunday</div>
+    </div>
+  </div>
 </body>
 </html>
