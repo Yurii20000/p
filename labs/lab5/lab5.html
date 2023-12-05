@@ -4,57 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <title>Моє Портфоліо</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-image: url('your-background-image.jpg'); /* Замініть 'your-background-image.jpg' на URL вашого фонового зображення */
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-
-        header {
-            text-align: center;
-            padding: 100px;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.5em;
-            margin-bottom: 40px;
-        }
-
-        .portfolio-link {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-        }
-
-        .portfolio-link:hover {
-            background-color: #2980b9;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Ваше Портфоліо</title>
 </head>
 
 <body>
     <header>
         <h1>Моє Портфоліо</h1>
         <p>Ласкаво просимо! Тут ви можете ознайомитися з моїми проектами та навичками.</p>
-        <a href="your-portfolio-link" class="portfolio-link">Переглянути Портфоліо</a>
     </header>
+
+    <section>
+        <div class="portfolio-item">
+            <h2>Проект 1</h2>
+            <p>Опис проекту 1.</p>
+            <a href="#">Детальніше</a>
+        </div>
+
+        <div class="portfolio-item">
+            <h2>Проект 2</h2>
+            <p>Опис проекту 2.</p>
+            <a href="#">Детальніше</a>
+        </div>
+
+        <div class="portfolio-item">
+            <h2>Проект 3</h2>
+            <p>Опис проекту 3.</p>
+            <a href="#">Детальніше</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Ваше Портфоліо</p>
+    </footer>
 </body>
 
 </html>
