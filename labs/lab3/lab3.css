@@ -1,126 +1,207 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Reset default styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the font-family for the entire page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-header {
-    background-color: #FF0000;
-    color: #FFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+/* Header section styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 15px;
 }
 
-.logo {
-    font-size: 24px;
+/* Horizontal line styles */
+hr {
+  height: 1px;
+  background-color: #e5e5e5;
+  border: none;
 }
 
-.search-bar {
-    display: flex;
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Set this to make it a column */
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
-input[type="text"] {
-    padding: 5px;
-    border: 1px solid #CCC;
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
 }
 
-button {
-    background-color: #FF3333;
-    color: #FFF;
-    border: none;
-    padding: 5px 10px;
+.nav-link span {
+  margin-left: 15px;
 }
 
+.nav-link:hover {
+  background: #e5e5e5;
+  cursor: pointer;
+}
+
+.active {
+  background: #e5e5e5;
+}
+
+/* Main content styles */
 main {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  height: calc(100vh - 70px);
+  display: flex;
+  background-color: #f9f9f9;
+}
+
+.content {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 100%;
+  padding: 15px 15px;
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+}
+
+.videos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .video {
-    flex: 2;
+  width: 270px;
+  margin-bottom: 20px; /* Add margin at the bottom to create space */
 }
 
-iframe {
-    width: 100%;
+.thumbnail {
+  width: 100%;
+  height: 170px;
 }
 
-recommendations {
-    flex: 1;
-}body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f9f9f9;
+.thumbnail img {
+  object-fit: cover;
+  height: 94%;
+  width: 100%;
+}
+.author img {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
 }
 
-.container {
-    display: flex;
+.details {
+  display: flex;
 }
-
-header {
-    background-color: #FF0000;
-    color: #FFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+ 
+.title {
+  display: flex;
+  flex-direction: column;
 }
-
-.logo {
-    font-size: 24px;
+ 
+.title h3 {
+  color: rgb(3, 3, 3);
+  line-height: 18px;
+  font-size: 14px;
+  margin-bottom: 6px;
 }
-
-.search-bar {
-    display: flex;
-}
-
-input[type="text"] {
-    padding: 5px;
-    border: 1px solid #CCC;
-}
-
-button {
-    background-color: #FF3333;
-    color: #FFF;
-    border: none;
-    padding: 5px 10px;
-}
-
-main {
-    display: flex;
-    width: 100%;
-}
-
-.sidebar {
-    flex: 1;
-    background-color: #333;
-    color: #FFF;
-    padding: 20px;
-}
-
-.video-container {
-    flex: 3;
-    padding: 20px;
-    background-color: #FFF;
-}
-
-.recommendations {
-    flex: 2;
-    padding: 20px;
-    background-color: #FFF;
+ 
+.title a,
+span {
+  text-decoration: none;
+  color: rgb(96, 96, 96);
+  font-size: 12px;
 }
 
 
-video-thumbnail {
-    padding: 10px;
-    border: 1px solid #CCC;
-    margin: 10px 0;
+/* Search section styles */
+.search {
+  display: flex;
 }
 
-footer {
-    background-color: #FF0000;
-    color: #FFF;
-    text-align: center;
-    padding: 10px;
+.search form {
+  display: flex;
+  border: 1px solid #ddd;
+  height: 45px;
 }
+
+/* Sidebar styles */
+.side-bar {
+  height: 100%;
+  width: 17%;
+  background-color: white;
+  overflow-y: hidden;
+}
+
+/* Styles for the left section in the header */
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.left #menu {
+  padding: 0 7px;
+  cursor: pointer;
+}
+
+/* Styles for the search input */
+.search input {
+  width: 600px;
+  padding: 10px;
+  border: 0;
+  height: 100%;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Styles for the search input when focused */
+input:focus {
+  outline: none;
+  border: 1px solid #ddd;
+}
+
+/* Styles for the search button */
+.search button {
+  height: 100%;
+  width: 60px;
+  border: none;
+}
+
+/* Styles for the microphone icon */
+.mic {
+  margin-top: 10px;
+}
+
+/* Styles for material icons */
+.material-icons {
+  color: rgb(100, 100, 100);
+  padding: 0 7px;
+  cursor: pointer;
+}
+
+/* Media query for hiding the sidebar on small screens */
+ @media (max-width: 768px) {
+    .side-bar {
+      display: none;
+    }
+    .search {
+      display: none;
+    }
+}
+
+  @media (max-width: 900px) {
+    .search input {
+      width: 25rem;
+    }
+  }
