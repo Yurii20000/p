@@ -1,212 +1,244 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+<html lang="en">
 
-    <link rel="stylesheet" href="./la5.html" />
-    <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      height: 100vh;
-      margin: 0;
-      overflow: hidden; /* Hide the scrollbar */
-    }
+<head>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Лабораторна 5 - Бєляєв Данило
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
 
-    nav {
-      text-align: center;
-    }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-    }
 
-    a {
-      text-decoration: none;
-      color: #007BFF;
-      font-weight: bold;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/lab5.css">
 
-    .home {
-      position: relative;
-      background-color: #fff;
-      max-width: 2050px; /* Adjust the value as needed */
-      width: 100%;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: left;
-      font-size: 16px;
-      color: #21243d;
-      font-family: Heebo;
-      padding: 20px;
-    }
 
-    .navigation-menu {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: #ffffff;
-    }
+</head>
 
-    .navigation-menu li {
-      margin: 10px;
-      display: inline-block;
-    }
+<body>
 
-    .button-link {
-      text-decoration: none;
-      font-size: var(--font-size-xl);
-      font-weight: 500;
-      display: inline-block;
-      background-color: #007BFF;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
 
-    .button-link:hover {
-      background-color: #0056b3;
-    }
-    </style>
-  </head>
-  <body>
-    <div class="home" id="homeContainer">
-      <div class="home-child"></div>
-      <div class="home-item"></div>
-      <h1 class="hi-i-am-container">
-        <p class="hi-i-am">About Nicholas</p>
-        <p class="hi-i-am">Senior Engineer</p>
-      </h1>
-      <div class="amet-minim-mollit">
-        Unbearable talented nephew Nicholas Kim Coppola.
-        For the sake of the role, he is ready to eat insects;
-        it’s time to make a film about his personal life in the spirit of Indian cinema filled with passions and unexpected twists.
-      </div>
-      <nav>
-      </nav>
-      <script>
-        document.getElementById('button1').addEventListener('click', function() {
-          window.location.href = 'https://xxxben228xxx.github.io/kisyr/#main';
-        });
-    
-        document.getElementById('button2').addEventListener('click', function() {
-          window.location.href = 'https://xxxben228xxx.github.io/kisyr/#about-me';
-        });
-    
-        document.getElementById('button3').addEventListener('click', function() {
-          window.location.href = 'https://xxxben228xxx.github.io/kisyr/#practical-works';
-        });
-    
-        document.getElementById('button4').addEventListener('click', function() {
-          window.location.href = 'https://xxxben228xxx.github.io/kisyr/#laboratory-classes';
-        });
-      </script>
-      <div class="download-resume">Download Resume</div>
-      <img class="home-inner" alt="" src="https://i.redd.it/g4fm789q2cc11.jpg" />
 
-      <section class="rectangle-section"></section>
-      <div class="rectangle-div"></div>
-      <div class="home-child1"></div>
-      <b class="making-a-design">Making a design system from scratch</b>
-      <b class="creating-pixel-perfect"
-        >Creating pixel perfect icons in Figma</b
-      >
-      <div class="design-pattern">Design, Pattern</div>
-      <div class="figma-icon-design">Figma, Icon Design</div>
-      <img class="vector-icon" alt="" src="./public/vector-1.svg" />
+    <div class="wrapper">
+        <header class="header">
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="../..">Home</a>
+                    </li>
+                    <li>
+                        <a href="../../pracs">Pracs</a>
+                    </li>
+                    <li>
+                        <a href="../../labs">Labs</a>
+                    </li>
+                </ul>
+            </nav>
 
-      <img class="home-child2" alt="" src="./public/vector-2.svg" />
+            <button class="burger">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-burger" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 15h16a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                    <path d="M12 4c3.783 0 6.953 2.133 7.786 5h-15.572c.833 -2.867 4.003 -5 7.786 -5z" />
+                    <path d="M5 12h14" />
+                </svg>
+            </button>
+        </header>
 
-      <div class="feb-2020">20 Nove 2023</div>
-      <div class="feb-20201">14 Nove 2023</div>
-      <div class="amet-minim-mollit1">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </div>
-      <div class="amet-minim-mollit2">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </div>
-      <div class="recent-posts">Recent posts</div>
-      <div class="view-all">View all</div>
-      <h3 class="featured-works">Featured works</h3>
-      <div class="footer">
-        <div class="footer-child"></div>
-        <img class="fb-icon" alt="" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2017/240/iconmonstr-facebook-6.png" />
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero">
+                        <h1 class="hero_heading">Hi, <span>I'm Dan</span>, Software Engineer</h1>
+                        <p class="hero_subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, enim nemo vitae necessitatibus qui laudantium facere iusto eveniet dolorem cupiditate eius ipsa porro similique aspernatur adipisci repellendus nam distinctio quo ut. Aspernatur, inventore! Eius, saepe? Impedit excepturi eum dolorem aliquam. Enim quos voluptates possimus nisi nulla nemo. Laborum, quas accusamus!</p>
 
-        <img class="linkedin-icon" alt="" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/240/iconmonstr-linkedin-3.png" />
+                        <div>
+                            <button class="hero-action-btn">Download Resume</button>
+                        </div>
+                    </div>
 
-        <img class="group-icon" alt="" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2014/240/iconmonstr-steam-3.png" />
+                    <div class="picture">
+                        <figure>
+                            <img src="../../assets/img/ava2019-ua.png" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <img class="insta-icon" alt="" src="https://cdns.iconmonstr.com/wp-content/releases/preview/2018/240/iconmonstr-discord-3.png" />
+        <section class="recent-section">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="section-header">
+                        <h2>Recent posts</h2>
 
-        <div class="copyright-2020-all">
-          Copyright ©2023 All rights reserved
-        </div>
-      </div>
-      <h2 class="designing-dashboards">Designing Dashboards</h2>
-      <b class="vibrant-portraits-of">Vibrant Portraits of 2020</b>
-      <b class="days-of-malayalam">36 Days of Malayalam type</b>
-      <div class="dashboard">Dashboard</div>
-      <div class="illustration">Illustration</div>
-      <div class="typography">Typography</div>
-      <div class="amet-minim-mollit3">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </div>
-      <div class="amet-minim-mollit4">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </div>
-      <div class="amet-minim-mollit5">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </div>
-      <div class="home-child3"></div>
-      <div class="home-child4"></div>
-      <div class="home-child5"></div>
-      <div class="div">2023</div>
-      <div class="div1">2023</div>
-      <div class="div2">2023</div>
-      <img class="home-child6" alt="" src="./public/vector-8.svg" />
+                        <a href="#">View all</a>
+                    </div>
 
-      <img class="home-child7" alt="" src="./public/vector-12.svg" />
+                    <div class="articles">
+                        <a href="#" class="item">
+                            <div class="item-header">Making a design system from scratch</div>
 
-      <img class="home-child8" alt="" src="./public/vector-13.svg" />
+                            <div class="date-tags">
+                                <div class="date">20 Nov 2023</div>
+                                <hr>
+                                <div class="tags">Design, Pattern</div>
+                            </div>
 
-      <img class="rectangle-icon" alt="" src="https://ik.imagekit.io/panmac/tr:f-auto,w-740,pr-true//bcd02f72-b50c-0179-8b4b-5e44f5340bd4/1c94d79b-a651-47df-aeb2-d7fce7570a22/george-orwell-quotes-header-min.jpg" />
+                            <div class="item-body">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            </div>
+                        </a>
 
-      <img class="home-child9" alt="" src="https://ik.imagekit.io/panmac/tr:f-auto,w-740,pr-true//bcd02f72-b50c-0179-8b4b-5e44f5340bd4/1c94d79b-a651-47df-aeb2-d7fce7570a22/george-orwell-quotes-header-min.jpg" />
+                        <a href="../l4" class="item">
+                            <div class="item-header">Making a design system from scratch</div>
 
-      <img class="home-child10" alt="" src="https://ik.imagekit.io/panmac/tr:f-auto,w-740,pr-true//bcd02f72-b50c-0179-8b4b-5e44f5340bd4/1c94d79b-a651-47df-aeb2-d7fce7570a22/george-orwell-quotes-header-min.jpg" />
+                            <div class="date-tags">
+                                <div class="date">20 Nov 2023</div>
+                                <hr>
+                                <div class="tags">Design, Pattern</div>
+                            </div>
+
+                            <div class="item-body">
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="section-header">
+                        <h2>Featured works</h2>
+                    </div>
+
+                    <div class="items">
+                        <div class="item">
+                            <div class="picture">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="body">
+                                <div class="title">Designing Dashboards</div>
+
+                                <div class="meta">
+                                    <div class="year">2023</div>
+
+                                    <div class="tag">Dashboard</div>
+                                </div>
+
+                                <div class="description">
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="picture">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="body">
+                                <div class="title">Designing Dashboards</div>
+
+                                <div class="meta">
+                                    <div class="year">2023</div>
+
+                                    <div class="tag">Dashboard</div>
+                                </div>
+
+                                <div class="description">
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="picture">
+                                <figure>
+                                    <img src="" alt="">
+                                </figure>
+                            </div>
+
+                            <div class="body">
+                                <div class="title">Designing Dashboards</div>
+
+                                <div class="meta">
+                                    <div class="year">2023</div>
+
+                                    <div class="tag">Dashboard</div>
+                                </div>
+
+                                <div class="description">
+                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <div class="figma-template">
+        <a href="https://www.figma.com/file/gKZoWoleFgP35xvYu83Y2l/Portfolio-UI---Web-%26-Mobile?type=design&node-id=6%3A52&mode=design&t=fNXaqLu4FkFagULo-1" target="_blank">
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-figma" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M15 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                    <path d="M6 3m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z" />
+                    <path d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15" />
+                </svg>
+            </span>
+
+            <span>View template on Figma</span>
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="wrapper">
+                <div class="socials">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+
+                <div class="copy">Copyright &copy;2023 All rights reserved </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
     <script>
-      var homeContainer = document.getElementById("homeContainer");
-      if (homeContainer) {
-        homeContainer.addEventListener("click", function (e) {
-          // Please sync "Blog" to the project
-        });
-      }
-      </script>
-  </body>
+        const burger = document.querySelector('.burger');
+        const header = document.querySelector('.header');
+
+        burger.addEventListener('click', () => {
+            header
+                .classList
+                .toggle('open');
+        })
+    </script>
+
+</body>
+
 </html>
