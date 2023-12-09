@@ -1,0 +1,113 @@
+/* Your existing CSS */
+
+body {
+    font-family: 'YourCustomFont', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  .weekly-plan {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .section-block {
+    border: 1px solid #ddd;
+    position: relative;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .top-block,
+  .middle-block,
+  bottom-block {
+    position: absolute;
+    left: 10px;
+  }
+  
+  .top-block {
+    top: 10px;
+  }
+  
+  .middle-block {
+    top: 60px;
+  }
+  
+  .bottom-block {
+    top: 110px;
+  }
+  
+  .days {
+    text-align: center;
+  }
+  
+  .days-table {
+    display: table;
+    width: 100%;
+  }
+  
+  .days-row {
+    display: table-row;
+  }
+  
+  .day {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+  }
+  
+  .day-textarea {
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+    width: 90%;
+  }
+  
+  .dotted-lines {
+    border-top: 1px dotted #ddd;
+    margin: 10px 0;
+  }
+  
+  .text-input {
+    width: 100%;
+    border: none;
+    resize: none;
+    overflow: hidden;
+  }
+  
+  /* Newly added grid layout styles */
+  
+  .container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "header header" "left right";
+    grid-template-columns: 450px 1fr;
+    grid-template-rows: 160px 1fr;
+  }
+  
+  .container > div {
+    border: 0.2cm solid #888;
+  }
+  
+  .header {
+    grid-area: header;
+  }
+  
+  .left {
+    grid-area: left;
+  }
+  
+  .right {
+    grid-area: right;
+  }
