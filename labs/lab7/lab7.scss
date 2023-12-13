@@ -1,0 +1,55 @@
+// Змінні
+$primary-color: #4285f4;
+$secondary-color: #34a853;
+$font-family: 'Arial', sans-serif;
+
+// Основний стиль
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 50px auto;
+}
+
+.card__header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.card__title {
+  margin: 0;
+}
+
+.card__content {
+  padding: 20px;
+}
+
+.card__message {
+  color: #333;
+}
+
+.card__image {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.card__footer {
+  background-color: $secondary-color;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.card__signature {
+  margin: 0;
+}
