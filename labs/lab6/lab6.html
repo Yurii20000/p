@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Similar Images</title>
+    <title>Google Custom Search</title>
 </head>
 <body>
-    <input type="file" accept="image/*" id="uploadInput">
-    <button onclick="searchSimilarImages()">Search Similar Images</button>
 
-    <div id="results"></div>
+<!-- Підключіть ваш JavaScript файл -->
+<script src="script.js" async></script>
 
-    <script src="animations.js"></script>
+<!-- Підключіть скрипт Google CSE -->
+<script async src="https://cse.google.com/cse.js?cx=603f2d42a536b4b43"></script>
+<div class="gcse-search"></div>
+
 </body>
 </html>
-
