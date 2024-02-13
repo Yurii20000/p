@@ -1,31 +1,24 @@
-function searchSimilarImages() {
-  const fileInput = document.getElementById('uploadInput');
-  const file = fileInput.files[0];
+// Створіть новий елемент скрипта
+var scriptElement = document.createElement('script');
 
-  const formData = new FormData();
-  formData.append('image', file);
+// Встановіть атрибут src
+scriptElement.src = 'https://cse.google.com/cse.js?cx=603f2d42a536b4b43';
 
-  fetch('URL_TO_YOUR_SERVER_ENDPOINT', {
-      method: 'POST',
-      body: formData
-  })
-  .then(response => response.json())
-  .then(data => {
-      displayResults(data);
-  })
-  .catch(error => {
-      console.error('Error:', error);
-  });
-}
+// Додайте атрибут async
+scriptElement.async = true;
 
-function displayResults(results) {
-  const resultsDiv = document.getElementById('results');
-  resultsDiv.innerHTML = '';
+// Отримайте елемент body
+var bodyElement = document.getElementsByTagName('body')[0];
 
-  results.forEach(result => {
-      const img = document.createElement('img');
-      img.src = result.url;
-      img.alt = 'Similar Image';
-      resultsDiv.appendChild(img);
-  });
-}
+// Додайте елемент скрипта в кінець body
+bodyElement.appendChild(scriptElement);
+
+// Створіть новий елемент div
+var divElement = document.createElement('div');
+
+// Додайте клас gcse-search до нового елемента div
+divElement.className = 'gcse-search';
+
+// Додайте новий елемент div в кінець body
+bodyElement.appendChild(divElement);
+
