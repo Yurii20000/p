@@ -1,10 +1,31 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Анімація для першого покемона
-  gsap.to("#pokemon1", { x: 200, duration: 2, repeat: -1, yoyo: true });
+function searchSimilarImages() {
+  const fileInput = document.getElementById('uploadInput');
+  const file = fileInput.files[0];
 
-  // Анімація для другого покемона
-  gsap.to("#pokemon2", { x: -200, duration: 2, repeat: -1, yoyo: true });
+  const formData = new FormData();
+  formData.append('image', file);
 
-  // Анімація для третього покемона
-  gsap.to("#pokemon3", { y: 100, duration: 2, repeat: -1, yoyo: true });
-});
+  fetch('URL_TO_YOUR_SERVER_ENDPOINT', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+      displayResults(data);
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+}
+
+function displayResults(results) {
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
+
+  results.forEach(result => {
+      const img = document.createElement('img');
+      img.src = result.url;
+      img.alt = 'Similar Image';
+      resultsDiv.appendChild(img);
+  });
+}

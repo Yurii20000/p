@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Pokemon Animation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Similar Images</title>
 </head>
 <body>
-  <div class="pokemon-container">
-    <img src="https://img.pokemondb.net/sprites/home/shiny/grimmsnarl-gigantamax.png" alt="Grimmsnarl" class="pokemon-sprite" id="pokemon1">
-    <img src="https://img.pokemondb.net/sprites/sword-shield/normal/grookey.png" alt="Grookey" class="pokemon-sprite" id="pokemon2">
-    <img src="https://img.pokemondb.net/sprites/sword-shield/normal/sobble.png" alt="Sobble" class="pokemon-sprite" id="pokemon3">
-  </div>
+    <input type="file" accept="image/*" id="uploadInput">
+    <button onclick="searchSimilarImages()">Search Similar Images</button>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="animations.js"></script>
+    <div id="results"></div>
+
+    <script src="animations.js"></script>
 </body>
 </html>
+
