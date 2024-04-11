@@ -18,11 +18,6 @@ function updateInput() {
 // Function to handle number button clicks
 numbers.forEach(number => {
     number.addEventListener('click', () => {
-        if (operator === '') {
-            firstValue = currentInput;
-        } else {
-            secondValue = currentInput;
-        }
         currentInput += number.textContent;
         updateInput();
     });
@@ -31,9 +26,12 @@ numbers.forEach(number => {
 // Function to handle operator button clicks
 operators.forEach(op => {
     op.addEventListener('click', () => {
-        operator = op.textContent;
-        currentInput = '';
-        updateInput();
+        if (currentInput !== '') {
+            operator = op.textContent;
+            firstValue = parseFloat(currentInput);
+            currentInput = '';
+            updateInput();
+        }
     });
 });
 
@@ -49,38 +47,42 @@ clearBtn.addEventListener('click', () => {
 
 // Function to calculate the result
 function calculate() {
-    if (!firstValue || !secondValue) {
-        return;
+    if (secondValue === null && currentInput !== '') {
+        secondValue = parseFloat(currentInput);
     }
 
     switch (operator) {
         case '+':
-            result = parseFloat(firstValue) + parseFloat(secondValue);
+            result = firstValue + secondValue;
             break;
         case '-':
-            result = parseFloat(firstValue) - parseFloat(secondValue);
+            result = firstValue - secondValue;
             break;
         case '*':
-            result = parseFloat(firstValue) * parseFloat(secondValue);
+            result = firstValue * secondValue;
             break;
         case '/':
-            result = parseFloat(firstValue) / parseFloat(secondValue);
+            if (secondValue === 0) {
+                result = 'Error';
+            } else {
+                result = firstValue / secondValue;
+            }
             break;
         default:
-            return;
+            result = null;
+            break;
     }
 
     currentInput = result.toString();
     operator = '';
     firstValue = result;
     secondValue = null;
-    result = null;
     updateInput();
 }
 
 // Function to handle calculate button click
 calculateBtn.addEventListener('click', () => {
-    if (firstValue !== null && secondValue !== null) {
+    if (operator !== '' && currentInput !== '') {
         calculate();
     }
 });
