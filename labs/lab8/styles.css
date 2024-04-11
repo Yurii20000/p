@@ -1,78 +1,51 @@
 body {
-    background-color: rgb(176, 222, 139); /* Зелений фон */
-    font-family: Arial, sans-serif; /* Використання стандартного шрифту */
-    margin: 0; /* Видалення зовнішніх відступів */
-    padding: 0; /* Видалення внутрішніх відступів */
-    display: flex; /* Вирівнювання по центру */
-    justify-content: center; /* Вирівнювання по горизонталі */
-    align-items: center; /* Вирівнювання по вертикалі */
-    height: 100vh; /* Заповнення всього висоти вікна */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container {
-    width: 90%; /* Ширина контейнера */
-    max-width: 400px; /* Максимальна ширина контейнера */
+.calculator {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
-    grid-auto-rows: minmax(80px, auto); /* Автоматична висота рядків */
-    gap: 5px; /* Відступи між елементами */
-    background-color: rgb(209, 237, 195); /* Зелений фон контейнера */
-    padding: 15px; /* Додавши внутрішній відступ */
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
+    grid-gap: 5px;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
 }
 
-.inputIn {
-    box-sizing: border-box;
-    grid-column: span 4; /* Розтягнення на всю ширину контейнера */
-    height: 100px;
-    line-height: 100px; /* Покращення вертикального центрування */
-    font-size: 36px; /* Розмір шрифту */
-    text-align: right;
+.input {
+    grid-column: span 4;
+    height: 80px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     padding: 10px;
-    overflow: hidden; /* Приховане переповнення */
-    white-space: nowrap; /* Відключення перенесення рядка */
-    border: 3px solid black;
-    background-color: rgb(231, 252, 194); /* Світло-зелений фон вводу */
+    font-size: 24px;
 }
 
-button {
-    width: 100%; /* Розтягнення кнопок на всю ширину колонки */
-    height: 80px; /* Фіксована висота кнопок */
-    border: none; /* Видалення меж кнопок */
-    border-radius: 5px; /* Закруглені кути */
-    font-size: 24px; /* Розмір шрифту */
+.btn {
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-}
-
-.equal {
-    background-color: rgb(255, 0, 0); /* Червоний фон кнопки "Дорівнює" */
-}
-
-.clear {
-    background-color: rgb(200, 200, 200); /* Світло-сірий фон кнопки "С" */
-}
-
-.operation {
-    background-color: rgb(169, 169, 169); /* Сірий фон кнопок операцій */
+    font-size: 24px;
 }
 
 .number {
-    background-color: rgb(255, 255, 255); /* Білий фон числових кнопок */
+    background-color: #ddd;
 }
 
-.inputIn,
-.equal,
-.clear,
-.operation {
-    writing-mode: vertical-lr; /* Вертикальне відображення тексту */
-    text-orientation: upright; /* Вертикальна орієнтація тексту */
+.operator {
+    background-color: #ccc;
 }
 
-.number {
-    justify-self: end; /* Вирівнювання тексту по правому краю */
+.clear, .calculate {
+    background-color: #ff6347;
 }
 
-.operation,
-.clear,
-.equal {
-    justify-self: start; /* Вирівнювання тексту по лівому краю */
+.btn:hover {
+    background-color: #aaa;
 }

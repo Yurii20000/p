@@ -1,91 +1,81 @@
-// number
-let arrNumberCalc =  document.querySelectorAll(".number");
+const input = document.querySelector('.input');
+const numbers = document.querySelectorAll('.number');
+const operators = document.querySelectorAll('.operator');
+const clearBtn = document.querySelector('.clear');
+const calculateBtn = document.querySelector('.calculate');
 
-// sing & input
-let inputIn = document.querySelector(".inputIn");
-let clean = document.querySelector(".clean");
-let cleanOne = document.querySelector(".cleanOne");
-let plusOrMinus = document.querySelector(".plusOrMinus");
-let plurar = document.querySelector(".plurаr");
-let division = document.querySelector(".division");
-let minus = document.querySelector(".minus");
-let plus = document.querySelector(".plus");
-let point = document.querySelector(".point");
-let equal = document.querySelector(".equal");
-let sum = [];
+let currentInput = '';
+let operator = '';
+let firstValue = null;
+let secondValue = null;
+let result = null;
 
-clean.onclick = function() {
-   inputIn.innerHTML = "";
-   sum.length = 0;
+// Function to update the input display
+function updateInput() {
+    input.textContent = currentInput;
 }
 
-cleanOne.onclick = function() {
-    let inInnerHtml = inputIn.innerHTML;
-    inputIn.innerHTML = inInnerHtml.substring(0, inInnerHtml.length-1);
-}
-
-plusOrMinus.onclick = function() {
-    let inInnerHtml = inputIn.innerHTML;
-    let oneSimfol = inInnerHtml[0];
-    if (oneSimfol != "-") {
-        inputIn.innerHTML = "-" + inInnerHtml;
-    } else if (oneSimfol == "-"){
-        inputIn.innerHTML = inInnerHtml.substring(1);
-    }
-}
-
-
-// вывод чисел 
-for (let i = 0; i < 10; i++) {
-    arrNumberCalc[i].onclick = function() {
-        inputIn.innerHTML = inputIn.innerHTML + i;
-     }
-
-}
-
-// point
-point.onclick = function() {
-    let searchPoint = inputIn.innerHTML.indexOf(".");
-    if (searchPoint == -1 && inputIn.innerHTML.length != 0) {
-        inputIn.innerHTML = inputIn.innerHTML + ".";
-    }
-}
-
-// calc
- plus.onclick = function() {
-    sum.push(parseFloat(inputIn.innerHTML));
-    sum.push("+");
-    inputIn.innerHTML = "";
- }
-
- minus.onclick = function() {
-    sum.push(parseFloat(inputIn.innerHTML));
-    sum.push("-");
-    inputIn.innerHTML = "";
- }
-
- plurar.onclick = function() {
-    sum.push(parseFloat(inputIn.innerHTML));
-    sum.push("*");
-    inputIn.innerHTML = "";
- }
-
- division.onclick = function() {
-    sum.push(parseFloat(inputIn.innerHTML));
-    sum.push("/");inputIn.innerHTML = "";
- }
- 
- equal.onclick = function() {
-    sum.push(parseFloat(inputIn.innerHTML));
-      let num = 0;
-   while(sum.length > 1) {
-        switch(sum[1]) {
-            case "+": num = sum[0] + sum[2]; sum.splice(0, 3, num); break;
-            case "-": num = sum[0] - sum[2]; sum.splice(0, 3, num); break;
-            case "/": num = sum[0] / sum[2]; sum.splice(0, 3, num); break;
-            case "*": num = sum[0] * sum[2]; sum.splice(0, 3, num); break;
+// Function to handle number button clicks
+numbers.forEach(number => {
+    number.addEventListener('click', () => {
+        if (operator === '') {
+            firstValue = currentInput;
+        } else {
+            secondValue = currentInput;
         }
+        currentInput += number.textContent;
+        updateInput();
+    });
+});
+
+// Function to handle operator button clicks
+operators.forEach(op => {
+    op.addEventListener('click', () => {
+        operator = op.textContent;
+        currentInput = '';
+        updateInput();
+    });
+});
+
+// Function to handle clear button click
+clearBtn.addEventListener('click', () => {
+    currentInput = '';
+    operator = '';
+    firstValue = null;
+    secondValue = null;
+    result = null;
+    updateInput();
+});
+
+// Function to calculate the result
+function calculate() {
+    switch (operator) {
+        case '+':
+            result = parseFloat(firstValue) + parseFloat(secondValue);
+            break;
+        case '-':
+            result = parseFloat(firstValue) - parseFloat(secondValue);
+            break;
+        case '*':
+            result = parseFloat(firstValue) * parseFloat(secondValue);
+            break;
+        case '/':
+            result = parseFloat(firstValue) / parseFloat(secondValue);
+            break;
+        default:
+            return;
     }
-    inputIn.innerHTML = sum[0];
-    sum = [];
- }
+    currentInput = result.toString();
+    operator = '';
+    firstValue = result;
+    secondValue = null;
+    result = null;
+    updateInput();
+}
+
+// Function to handle calculate button click
+calculateBtn.addEventListener('click', () => {
+    if (firstValue !== null && secondValue !== null) {
+        calculate();
+    }
+});
