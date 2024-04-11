@@ -49,6 +49,10 @@ clearBtn.addEventListener('click', () => {
 
 // Function to calculate the result
 function calculate() {
+    if (!firstValue || !secondValue) {
+        return;
+    }
+
     switch (operator) {
         case '+':
             result = parseFloat(firstValue) + parseFloat(secondValue);
@@ -65,6 +69,7 @@ function calculate() {
         default:
             return;
     }
+
     currentInput = result.toString();
     operator = '';
     firstValue = result;
