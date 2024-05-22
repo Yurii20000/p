@@ -27,8 +27,7 @@ function searchProducts() {
 
     products.forEach(product => {
         const name = product.getAttribute('data-name').toLowerCase();
-        const price = product.getAttribute('data-price').toLowerCase();
-        if (name.includes(query) || price.includes(query)) {
+        if (name.includes(query)) {
             product.style.display = 'block';
         } else {
             product.style.display = 'none';
