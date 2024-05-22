@@ -20,3 +20,18 @@ function updateCart() {
 
     document.getElementById('total-price').textContent = totalPrice;
 }
+
+function searchProducts() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const products = document.querySelectorAll('.product');
+
+    products.forEach(product => {
+        const name = product.getAttribute('data-name').toLowerCase();
+        const price = product.getAttribute('data-price').toLowerCase();
+        if (name.includes(query) || price.includes(query)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}

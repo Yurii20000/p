@@ -11,26 +11,42 @@
         <h1>Мій Магазин</h1>
         <nav>
             <ul>
-                <li><a href="#">Головна</a></li>
-                <li><a href="#">Про нас</a></li>
-                <li><a href="#">Контакти</a></li>
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#contact">Контакти</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="home">
+        <section class="search-bar">
+            <input type="text" id="search" placeholder="Пошук товарів..." oninput="searchProducts()">
+        </section>
         <section class="products">
             <h2>Товари</h2>
-            <div class="product" id="product1">
+            <div class="product" data-name="Товар 1" data-price="100">
                 <img src="product1.jpg" alt="Товар 1">
                 <h3>Товар 1</h3>
                 <p>Ціна: 100 грн</p>
                 <button onclick="addToCart('Товар 1', 100)">Додати до кошика</button>
             </div>
-            <div class="product" id="product2">
+            <div class="product" data-name="Товар 2" data-price="200">
                 <img src="product2.jpg" alt="Товар 2">
                 <h3>Товар 2</h3>
                 <p>Ціна: 200 грн</p>
                 <button onclick="addToCart('Товар 2', 200)">Додати до кошика</button>
+            </div>
+            <!-- Додано більше товарів -->
+            <div class="product" data-name="Товар 3" data-price="300">
+                <img src="product3.jpg" alt="Товар 3">
+                <h3>Товар 3</h3>
+                <p>Ціна: 300 грн</p>
+                <button onclick="addToCart('Товар 3', 300)">Додати до кошика</button>
+            </div>
+            <div class="product" data-name="Товар 4" data-price="400">
+                <img src="product4.jpg" alt="Товар 4">
+                <h3>Товар 4</h3>
+                <p>Ціна: 400 грн</p>
+                <button onclick="addToCart('Товар 4', 400)">Додати до кошика</button>
             </div>
         </section>
         <section class="cart">
@@ -41,6 +57,14 @@
             <p>Загальна сума: <span id="total-price">0</span> грн</p>
         </section>
     </main>
+    <section id="about">
+        <h2>Про нас</h2>
+        <p>Це наш інтернет-магазин. Ми продаємо найкращі товари для вас.</p>
+    </section>
+    <section id="contact">
+        <h2>Контакти</h2>
+        <p>Зв'яжіться з нами за телефоном: +380 00 000 0000 або email: info@shop.com</p>
+    </section>
     <script src="scripts.js"></script>
 </body>
 </html>
