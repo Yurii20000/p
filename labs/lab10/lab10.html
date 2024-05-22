@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="lab10.css">
+</head>
+<body>
+    <header>
+        <h1>Мій Магазин</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="products">
+            <h2>Товари</h2>
+            <div class="product" id="product1">
+                <img src="product1.jpg" alt="Товар 1">
+                <h3>Товар 1</h3>
+                <p>Ціна: 100 грн</p>
+                <button onclick="addToCart('Товар 1', 100)">Додати до кошика</button>
+            </div>
+            <div class="product" id="product2">
+                <img src="product2.jpg" alt="Товар 2">
+                <h3>Товар 2</h3>
+                <p>Ціна: 200 грн</p>
+                <button onclick="addToCart('Товар 2', 200)">Додати до кошика</button>
+            </div>
+        </section>
+        <section class="cart">
+            <h2>Кошик</h2>
+            <ul id="cart-items">
+                <!-- Items will be added here dynamically -->
+            </ul>
+            <p>Загальна сума: <span id="total-price">0</span> грн</p>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
