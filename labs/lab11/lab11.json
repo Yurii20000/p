@@ -1,0 +1,23 @@
+{
+    "classes": [
+      {
+        "subject": "Mathematics",
+        "teacher": "Mr. Smith",
+        "day": "Monday",
+        "time": "09:00"
+      },
+      {
+        "subject": "Physics",
+        "teacher": "Mrs. Johnson",
+        "day": "Monday",
+        "time": "11:00"
+      },
+      {
+        "subject": "Chemistry",
+        "teacher": "Dr. Brown",
+        "day": "Tuesday",
+        "time": "09:00"
+      }
+    ]
+  }
+  

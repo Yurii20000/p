@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Встановлює параметри вікна перегляду для адаптивного дизайну -->
+  <title>Розклад занять</title> <!-- Встановлює заголовок сторінки -->
+  <style>
+    table {
+      width: 100%; /* Встановлює ширину таблиці на 100% від ширини контейнера */
+      border-collapse: collapse; /* Об'єднує границі таблиці */
+    }
+    th, td {
+      border: 1px solid black; /* Встановлює чорні границі для комірок таблиці */
+      padding: 8px; /* Додає внутрішній відступ в комірках */
+      text-align: left; /* Вирівнює текст у комірках по лівому краю */
+    }
+    th {
+      background-color: #f2f2f2; /* Встановлює фон для заголовків таблиці */
+    }
+  </style>
+</head>
+<body>
+  <h1>Розклад занять</h1> <!-- Заголовок сторінки -->
+  <div id="schedule"></div> <!-- Контейнер для таблиці розкладу -->
+
+  <script>
+    // Приклад JSON даних
+    const jsonData = `{
+      "classes": [
+        {
+          "subject": "Mathematics",
+          "teacher": "Mr. Smith",
+          "day": "Monday",
+          "time": "09:00"
+        },
+        {
+          "subject": "Physics",
+          "teacher": "Mrs. Johnson",
+          "day": "Monday",
+          "time": "11:00"
+        },
+        {
+          "subject": "Chemistry",
+          "teacher": "Dr. Brown",
+          "day": "Tuesday",
+          "time": "09:00"
+        }
+      ]
+    }`;
+
+    // Перетворення JSON рядка в об'єкт
+    const scheduleData = JSON.parse(jsonData); // Перетворює JSON рядок в JavaScript об'єкт
+
+    // Функція для генерації розкладу
+    function generateSchedule(data) {
+      const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]; // Массив днів тижня
+      const table = document.createElement('table'); // Створює елемент таблиці
+      const thead = document.createElement('thead'); // Створює елемент заголовка таблиці
+      const tbody = document.createElement('tbody'); // Створює елемент тіла таблиці
+
+      // Створення заголовків таблиці
+      const headerRow = document.createElement('tr'); // Створює рядок таблиці для заголовків
+      const headers = ['Day', 'Time', 'Subject', 'Teacher']; // Масив заголовків таблиці
+      headers.forEach(headerText => { // Для кожного заголовка в масиві
+        const th = document.createElement('th'); // Створює елемент заголовка таблиці
+        th.textContent = headerText; // Встановлює текст заголовка
+        headerRow.appendChild(th); // Додає заголовок до рядка заголовків
+      });
+      thead.appendChild(headerRow); // Додає рядок заголовків до заголовка таблиці
+      table.appendChild(thead); // Додає заголовок таблиці до таблиці
+
+      // Заповнення таблиці даними
+      daysOfWeek.forEach(day => { // Для кожного дня в масиві днів тижня
+        const classesForDay = data.classes.filter(cls => cls.day === day); // Фільтрує класи для конкретного дня
+        classesForDay.forEach(cls => { // Для кожного класу в масиві класів для дня
+          const row = document.createElement('tr'); // Створює новий рядок таблиці
+          const cellDay = document.createElement('td'); // Створює комірку для дня
+          const cellTime = document.createElement('td'); // Створює комірку для часу
+          const cellSubject = document.createElement('td'); // Створює комірку для предмету
+          const cellTeacher = document.createElement('td'); // Створює комірку для вчителя
+
+          cellDay.textContent = cls.day; // Встановлює текст для комірки дня
+          cellTime.textContent = cls.time; // Встановлює текст для комірки часу
+          cellSubject.textContent = cls.subject; // Встановлює текст для комірки предмету
+          cellTeacher.textContent = cls.teacher; // Встановлює текст для комірки вчителя
+
+          row.appendChild(cellDay); // Додає комірку дня до рядка
+          row.appendChild(cellTime); // Додає комірку часу до рядка
+          row.appendChild(cellSubject); // Додає комірку предмету до рядка
+          row.appendChild(cellTeacher); // Додає комірку вчителя до рядка
+
+          tbody.appendChild(row); // Додає рядок до тіла таблиці
+        });
+      });
+
+      table.appendChild(tbody); // Додає тіло таблиці до таблиці
+      return table; // Повертає таблицю
+    }
+
+    // Додавання таблиці розкладу до сторінки
+    const scheduleContainer = document.getElementById('schedule'); // Отримує контейнер для розкладу за його ID
+    const scheduleTable = generateSchedule(scheduleData); // Генерує таблицю розкладу на основі даних
+    scheduleContainer.appendChild(scheduleTable); // Додає таблицю до контейнера
+  </script>
+</body>
+</html>
