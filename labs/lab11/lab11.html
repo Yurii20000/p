@@ -89,7 +89,7 @@
                     subjects.forEach(subject => {
                         const subjectElement = document.createElement('p');
                         subjectElement.className = 'subject';
-                        subjectElement.textContent = ${subject.time}: ${subject.subject};
+                        subjectElement.textContent = `${subject.time}: ${subject.subject}`;
                         dayElement.appendChild(subjectElement);
                     });
 
