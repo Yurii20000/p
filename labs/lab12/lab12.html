@@ -43,7 +43,7 @@
             display: none;
             margin-top: 20px;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* Змінено на 2 стовпці */
             gap: 10px;
         }
         .photos img {
@@ -88,7 +88,7 @@
         <p>Вітаємо тебе з 8-річчям! Нехай цей день буде сповнений радості, сміху та подарунків!</p>
         <button class="btn" onclick="showMessage()">Показати більше</button>
         <div class="message" id="extraMessage">
-            <p>Бажаємо тобі багато щасливих моментів,  нових досягнень і веселих пригод!</p>
+            <p>Бажаємо тобі багато щасливих моментів, нових досягнень і веселих пригод!</p>
             <div class="photos" id="photoGallery">
                 <img src="photo_2024-06-20_22-30-43.jpg" alt="Фото 1">
                 <img src="photo_2024-06-20_22-30-47.jpg" alt="Фото 2">
@@ -100,7 +100,8 @@
                 <img src="photo_2024-06-20_22-31-08.jpg" alt="Фото 8">
             </div>
         </div>
-</div>
+    </div>
+
     <script>
         function showMessage() {
             document.getElementById('extraMessage').style.display = 'block';
