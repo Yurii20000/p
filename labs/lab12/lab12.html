@@ -39,6 +39,18 @@
             margin-top: 20px;
             color: #333;
         }
+        .photos {
+            display: none;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .photos img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
         .btn {
             margin-top: 20px;
             padding: 10px 20px;
@@ -67,6 +79,9 @@
             .card {
                 max-width: 40%;
             }
+            .photos {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
     </style>
 </head>
@@ -79,11 +94,23 @@
         <div class="message" id="extraMessage">
             <p>Бажаємо тобі багато щасливих моментів, нових досягнень і веселих пригод!</p>
         </div>
+        <div class="photos" id="photoGallery">
+            <!-- Замініть 'small_photo1.jpg' на шляхи до ваших фотографій -->
+            <img src="photo_2024-06-20_21-54-05-removebg-preview.png" alt="Фото 1">
+            <img src="photo_2024-06-20_21-54-05-removebg-preview.png" alt="Фото 2">
+            <img src="photo_2024-06-20_21-54-05-removebg-preview.png" alt="Фото 3">
+            <img src="photo_2024-06-20_21-54-05-removebg-preview.png" alt="Фото 4">
+            <img src="photo_2024-06-20_21-54-05-removebg-preview.png" alt="Фото 5">
+            <img src="photo_2024-06-20_21-54-05-removebg-preview.png" alt="Фото 6">
+            <img src="photo_2024-06-20_21-54-05-removebg-preview.png" alt="Фото 7">
+            <img src="photo_2024-06-20_21-54-05-removebg-preview.png" alt="Фото 8">
+        </div>
     </div>
 
     <script>
         function showMessage() {
             document.getElementById('extraMessage').style.display = 'block';
+            document.getElementById('photoGallery').style.display = 'grid';
         }
     </script>
 </body>
