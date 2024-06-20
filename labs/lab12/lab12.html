@@ -40,6 +40,8 @@
             color: #333;
         }
         .photos {
+            display: none;
+            margin-top: 20px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
@@ -87,19 +89,18 @@
         <button class="btn" onclick="showMessage()">Показати більше</button>
         <div class="message" id="extraMessage">
             <p>Бажаємо тобі багато щасливих моментів, нових досягнень і веселих пригод!</p>
+            <div class="photos" id="photoGallery">
+                <img src="photo_2024-06-20_22-30-43.jpg" alt="Фото 1">
+                <img src="photo_2024-06-20_22-30-47.jpg" alt="Фото 2">
+                <img src="photo_2024-06-20_22-30-50.jpg" alt="Фото 3">
+                <img src="photo_2024-06-20_22-30-53.jpg" alt="Фото 4">
+                <img src="photo_2024-06-20_22-30-58.jpg" alt="Фото 5">
+                <img src="photo_2024-06-20_22-31-01.jpg" alt="Фото 6">
+                <img src="photo_2024-06-20_22-31-04.jpg" alt="Фото 7">
+                <img src="photo_2024-06-20_22-31-08.jpg" alt="Фото 8">
+            </div>
         </div>
-        <div class="photos" id="photoGallery">
-            <img src="small_photo1.jpg" alt="Фото 1">
-            <img src="small_photo2.jpg" alt="Фото 2">
-            <img src="small_photo3.jpg" alt="Фото 3">
-            <img src="small_photo4.jpg" alt="Фото 4">
-            <img src="small_photo5.jpg" alt="Фото 5">
-            <img src="small_photo6.jpg" alt="Фото 6">
-            <img src="small_photo7.jpg" alt="Фото 7">
-            <img src="small_photo8.jpg" alt="Фото 8">
-        </div>
-    </div>
-
+</div>
     <script>
         function showMessage() {
             document.getElementById('extraMessage').style.display = 'block';
