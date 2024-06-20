@@ -13,6 +13,7 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f8ff;
+            padding: 10px;
         }
         .card {
             border: 2px solid #ff69b4;
@@ -21,6 +22,7 @@
             text-align: center;
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
         }
         .card img {
             border-radius: 15px;
@@ -47,6 +49,17 @@
         }
         .btn:hover {
             background-color: #ff1493;
+        }
+        /* Media Queries */
+        @media (min-width: 600px) {
+            .card {
+                max-width: 50%;
+            }
+        }
+        @media (min-width: 1024px) {
+            .card {
+                max-width: 30%;
+            }
         }
     </style>
 </head>
